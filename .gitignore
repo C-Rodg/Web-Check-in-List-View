@@ -10,3 +10,6 @@ npm-debug.log
 
 # Troubleshooting Location
 backup
+
+# Build files
+dist
