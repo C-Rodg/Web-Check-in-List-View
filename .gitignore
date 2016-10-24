@@ -1,0 +1,12 @@
+# Dependency directory
+node_modules
+
+# Logs
+logs
+*.log
+
+# Debug log from npm
+npm-debug.log
+
+# Troubleshooting Location
+backup
