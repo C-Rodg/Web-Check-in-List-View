@@ -10,14 +10,14 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, '/dist/'),
 		filename: '[name]-[hash].min.js',
-		publicPath: '/'
+		publicPath: ''
 	},
 	plugins: [
 		new webpack.optimize.OccurenceOrderPlugin(),
 		new HtmlWebpackPlugin({
 			template: 'src/index.tp1.html',
 			inject: 'body',
-			filename: 'index.html'
+			filename: 'Default.html'
 		}),
 		new ExtractTextPlugin('[name]-[hash].min.css'),
 		new webpack.optimize.UglifyJsPlugin({
@@ -50,7 +50,7 @@ module.exports = {
             loader: 'url?limit=10000&mimetype=application/font-woff'
 		},
 		{
-			test: /\.(ttf|eot|svg)(\?[a-z0-9#=&.]+)?$/,
+			test: /\.(ttf|eot|svg|png|jpg)(\?[a-z0-9#=&.]+)?$/,
             loader: 'file'
 		}]
 	},
