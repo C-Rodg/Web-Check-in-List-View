@@ -1,9 +1,9 @@
-# React-Webpack-starter
-A starter template built using React and Webpack
+# Web Check-in List View
+An event list view for the web check-in application.
 
 ## Motivation
 
-A minimalist React-Webpack starter template was difficult to find, so I decided to create my own.  An excellent starting point for any project.
+An overall view for the web check-in application. Uses Webpack and React.
 
 
 ## Contributors

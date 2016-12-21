@@ -1,10 +1,10 @@
 {
-  "name": "react-webpack-starter",
+  "name": "web-checkin-list-view",
   "version": "1.0.0",
-  "description": "A starter template using React and Webpack",
+  "description": "An event list view for the web check-in application.",
   "main": "app.js",
   "repository": {
-    "url": "https://github.com/C-Rodg/React-Webpack-starter.git",
+    "url": "https://github.com/C-Rodg/Web-Check-in-List-View.git",
     "type": "git"
   },
   "author": "Curtis Rodgers",
@@ -12,13 +12,7 @@
   "dependencies": {
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-hot-loader": "^3.0.0-beta.6",
-    "react-redux": "^4.4.5",
-    "react-router": "^2.8.1",
-    "redux": "^3.6.0",
-    "redux-logger": "^2.7.0",
-    "redux-promise": "^0.5.3",
-    "redux-thunk": "^2.1.0"
+    "react-hot-loader": "^3.0.0-beta.6"
   },
   "scripts": {
     "test": "",
