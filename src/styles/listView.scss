@@ -26,12 +26,10 @@
 }
 
 .error-container {
-	background-color: #fff;
 	padding: 10px;
-	box-shadow: 0 1px 3px 0 rgba(0,0,0,.33);
-	margin: 10px auto 50px;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,.33);	
 	border-radius: 2px;
-
+	background-color: #fff;
 	.reload {
 		cursor: pointer;
 		text-decoration: underline;
@@ -41,6 +39,15 @@
 		letter-spacing: 0.8px;
 		margin-top:8px;
 	}
+}
+
+.msg-container {
+	padding:10px;	
+}
+
+.msg-text {
+	font-family: 'robotomedium', 'roboto', Helvetica, Arial, sans-serif;
+	opacity: 0.9;
 }
 
 .event-tile-wrapper {
