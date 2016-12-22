@@ -6,7 +6,7 @@ export default class EventTile extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			count : ""
+			count : "0/0"
 		};
 	}
 
@@ -31,25 +31,40 @@ export default class EventTile extends Component {
 			<div className="row event-tile-wrapper fade-in-up">
 				<a href={this.props.EventGuid} className="event-tile col-xs-12 col-sm-6 offset-sm-3">
 					<p className="card-head">
-						{this.props.Name}
-						<span className="count">{this.state.count}</span>
+						{this.props.Name}						
 					</p>
 					<div className="card-content clearfix">
-						{
-							date ? 
-							<div className="card-content-block card-date col-xs-12 col-sm-7">
-								{ date }
-								<small>Date</small>
-							</div> :
-							""
-						}					
-						{ (location || this.props.Venue) ? 
-							<div className="card-content-block card-location col-xs-12 col-sm-5">
-								{ location || this.props.Venue}
-								<small>Location</small>
-							</div> :
-							""
-						}					
+						<div className="col-xs-12 col-sm-6 card-content-left">
+							<div className="card-content-block card-count col-xs-12">
+								{ this.state.count }
+								<small>Attended</small>
+							</div>
+							{ location ? 
+								<div className="card-content-block card-location col-xs-12">
+									{ location }
+									<small>Location</small>
+								</div> :
+								""
+							}
+						</div>
+						<div className="col-xs-12 col-sm-6 card-content-right">
+							{
+								date ? 
+								<div className="card-content-block card-date col-xs-12">
+									{ date }
+									<small>Date</small>
+								</div> :
+								""
+							}
+							{
+								this.props.Venue ?
+								<div className="card-content-block card-venue col-xs-12">
+									{ this.props.Venue }
+									<small>Venue</small>
+								</div> :
+								""
+							}
+						</div>																											
 					</div>					
 				</a>
 			</div>

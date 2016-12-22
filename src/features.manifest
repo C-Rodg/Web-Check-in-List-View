@@ -1,6 +1,5 @@
 <manifest>
-	<features>
-		<feature name="CanListEvents" />		
+	<features>		
 		<feature name="CanAccessEventSettings" />		
 		<feature name="CanGetRegistrationStats" />		
 	</features>
