@@ -6,7 +6,7 @@ export default class EventTile extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			count : "0/0"
+			count : ""
 		};
 	}
 
@@ -14,11 +14,11 @@ export default class EventTile extends Component {
 		axios.post(`${this.props.EventGuid}/methods.asmx/GetRegistrationStats`, {})
 			.then((response) => {
 				this.setState({
-					count : `${response.d.TotalAttended}/${response.d.TotalRegistrants}`
+					count : `${response.data.d.TotalAttended}/${response.data.d.TotalRegistrants}`
 				});
 			})
 			.catch((err) => {
-				//console.log(err);
+				console.log(err);
 			});
 	}
 
@@ -28,7 +28,7 @@ export default class EventTile extends Component {
 		let endDate = moment(this.props.EndDate, 'YYYY-MM-DDTHH:mm:ss.SSSSSS').format('MMM Do, YYYY');
 		let date = [startDate, endDate].join(' - ');
 		return (
-			<div className="row event-tile-wrapper">
+			<div className="row event-tile-wrapper fade-in-up">
 				<a href={this.props.EventGuid} className="event-tile col-xs-12 col-sm-6 offset-sm-3">
 					<p className="card-head">
 						{this.props.Name}

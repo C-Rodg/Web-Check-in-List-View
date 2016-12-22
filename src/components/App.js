@@ -22,8 +22,10 @@ export default class App extends Component {
 	componentDidMount() {		
 		axios.post('methods.asmx/ListEvents', {})
 			.then((response) => {
-				console.log(response);
-				this.setState({ loading : false });
+				this.setState({
+					loading : false,
+					events : response.data.d.Events
+				});
 			})
 			.catch((err) => {
 				this.setState({ error : true, loading : false });
